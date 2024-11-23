@@ -18,3 +18,15 @@ Use Cases:
 
 - suitable for storing temporary data
 - logs and caches
+
+## hostPath
+
+It mounts a file or directory from the host node's filesystem into your Pod.
+Data stored in hostPath is not deleted when the Pod is removed.
+
+It is for single node clusters.
+
+Use Cases:
+
+- For development and testing
+- Access the host's filesystem
