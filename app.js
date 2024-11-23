@@ -31,4 +31,9 @@ app.post('/story', (req, res) => {
   });
 });
 
+app.get("/error", (req, res) => {
+  console.info("Error page requested");
+  process.exit(1);
+})
+
 app.listen(3000);
