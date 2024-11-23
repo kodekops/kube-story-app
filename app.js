@@ -5,12 +5,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
-
 const filePath = path.join(__dirname, 'story', 'text.txt');
 
 app.use(bodyParser.json());
 
-app.get('/story', (req, res) => {
+app.get('/story', (_req, res) => {
   fs.readFile(filePath, (err, data) => {
     if (err) {
       return res.status(500).json({ message: 'Failed to open file.' });
