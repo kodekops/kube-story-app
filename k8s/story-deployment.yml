@@ -5,7 +5,7 @@ metadata:
   labels:
     app: story
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: story
@@ -19,3 +19,9 @@ spec:
           image: kodega2016/story-app
           ports:
             - containerPort: 3000
+          volumeMounts:
+            - name: story-app-data
+              mountPath: /app/story
+      volumes:
+        - name: story-app-data
+          emptyDir: {}
