@@ -24,7 +24,11 @@ spec:
               mountPath: /app/story
           env:
             - name: STORY_DIR
-              value: story
+              # value: story
+              valueFrom:
+                configMapKeyRef:
+                  name: story-app-configmaps
+                  key: story_dir
       volumes:
         - name: story-app-data
           persistentVolumeClaim:
