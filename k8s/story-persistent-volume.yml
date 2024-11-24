@@ -5,6 +5,7 @@ metadata:
   labels:
     app: story
 spec:
+  storageClassName: standard
   capacity:
     storage: 2Gi
   volumeMode: Filesystem
