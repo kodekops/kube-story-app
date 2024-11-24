@@ -22,6 +22,9 @@ spec:
           volumeMounts:
             - name: story-app-data
               mountPath: /app/story
+          env:
+            - name: STORY_DIR
+              value: story
       volumes:
         - name: story-app-data
           persistentVolumeClaim:
